@@ -47,5 +47,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/php74ext:${{ github.event.commits[0].id }}
+            ${{ secrets.DOCKER_USERNAME }}/php74ext:${{ github.event.commits[0].message }}
 
