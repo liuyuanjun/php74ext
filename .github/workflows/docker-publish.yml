@@ -21,7 +21,7 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
         # 将GTIHUB的信息都打印出来，后面的脚本可以使用这些信息，例如后面的镜像TAG用的就是这里面的commitid
-        run: echo "Hello ${{ github.event.commits[0].id }}" && commitId="${{ github.event.commits[0].id }}"
+        run: echo "Hello ${{ github.event.commits[0].id }}"
 
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
@@ -47,5 +47,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/php74ext:${commitId:0:7}
+            ${{ secrets.DOCKERHUB_USERNAME }}/php74ext:aaa
 
