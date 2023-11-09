@@ -1,6 +1,0 @@
-# action.yml   https://docs.github.com/zh/actions/creating-actions/creating-a-docker-container-action
-name: 'PHP7.4-EXT'
-description: 'PHP 7.4 with some extensions.'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
