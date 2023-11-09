@@ -47,5 +47,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/php74ext:aaa
+            ${{ secrets.DOCKER_USERNAME }}/php74ext:aaa
 
